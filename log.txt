@@ -1,0 +1,73 @@
+2019-10-10 12:34:14,406[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'userslist'
+2019-10-10 12:37:44,818[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 12:58:23,070[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 12:58:23,090[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'username' not found.
+2019-10-10 13:03:26,966[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 13:03:26,980[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.UsersList@5eb5c224
+2019-10-10 13:05:04,825[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 13:05:25,086[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 13:05:25,100[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.UsersList@5eb5c224
+2019-10-10 13:49:32,213[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 13:49:32,249[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.UsersList@5eb5c224
+2019-10-10 13:53:29,072[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 13:53:29,086[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.UsersList@5eb5c224
+2019-10-10 14:18:21,029[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 14:18:21,048[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'usertype' not found.
+2019-10-10 14:19:29,455[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 14:19:29,469[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.UsersList@5eb5c224
+2019-10-10 17:51:26,129[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 17:51:46,414[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 17:52:28,491[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 17:52:28,508[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.UsersList@53e25b76
+2019-10-10 17:53:41,080[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 17:53:41,098[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.UsersList@53e25b76
+2019-10-10 18:01:07,046[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 18:01:07,074[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:02:05,812[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 18:02:05,832[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:04:29,021[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 18:04:29,040[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:09:12,427[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 18:09:12,440[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:33:23,442[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 18:33:23,462[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:37:46,301[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 18:37:46,320[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:46:22,641[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 18:46:22,661[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 19:00:17,206[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 19:00:17,225[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 19:01:40,845[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 19:01:40,864[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 19:04:47,133[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-10 19:04:47,152[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-11 16:44:28,610[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 16:48:47,052[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 16:53:57,703[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:00:16,700[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:05:16,721[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:05:59,948[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:07:02,980[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:20:37,146[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-11 17:20:37,208[yyyy-mm-dd HH-MM-SS] TRACE UsersList [user_id=1010, donor_name=null, username=EvelynEve, password=null, usertype=null]
+2019-10-14 10:17:13,890[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-14 10:17:26,514[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-14 14:33:33,394[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-14 15:13:01,639[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-14 15:13:14,585[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.blood_stock' doesn't exist
+2019-10-14 15:41:42,640[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-14 15:59:23,558[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established

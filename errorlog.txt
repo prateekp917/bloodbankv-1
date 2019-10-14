@@ -1,0 +1,35 @@
+2019-10-10 12:34:14,406[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'userslist'
+2019-10-10 12:58:23,090[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'username' not found.
+2019-10-10 14:18:21,048[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'usertype' not found.
+2019-10-10 18:01:07,074[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:02:05,832[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:04:29,040[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:09:12,440[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:33:23,462[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:37:46,320[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 18:46:22,661[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 19:00:17,225[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 19:01:40,864[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-10 19:04:47,152[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.donordetails' doesn't exist
+2019-10-11 16:44:28,610[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 16:48:47,052[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 16:53:57,703[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:00:16,700[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:05:16,721[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:05:59,948[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-11 17:07:02,980[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+Last packet sent to the server was 0 ms ago.
+2019-10-14 15:13:14,585[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.blood_stock' doesn't exist
