@@ -26,4 +26,14 @@ public class HospitalBloodbankService {
 		return bdao.findAll();
 	}
 	
+	public List<BloodStock> findBldtype(String bloodtype)
+	{
+		return bdao.findBldtype(bloodtype);
+	}
+	
+	public List<BloodStock> findstockbbank(String bbankname)
+	{
+		return bdao.findstockbbank(bbankname);
+	}
+	
 }

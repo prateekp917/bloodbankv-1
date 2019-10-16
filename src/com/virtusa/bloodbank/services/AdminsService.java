@@ -20,4 +20,8 @@ public class AdminsService {
 	{
 		return dao.findAll();
 	}
+	
+	public UsersList add(UsersList user) {
+		return dao.add(user);
+	}
 }

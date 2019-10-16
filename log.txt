@@ -71,3 +71,46 @@ Last packet sent to the server was 0 ms ago.
 2019-10-14 15:13:14,585[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.blood_stock' doesn't exist
 2019-10-14 15:41:42,640[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
 2019-10-14 15:59:23,558[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-15 10:25:55,792[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-15 10:26:19,793[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-15 10:36:06,519[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-15 10:47:21,601[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-15 10:52:07,002[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-15 14:52:33,800[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-15 14:52:33,958[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Can't call commit when autocommit=true
+2019-10-16 10:14:02,099[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:34:48,063[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:34:48,079[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'bloodtype' not found.
+2019-10-16 12:35:11,774[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:35:11,790[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 12:38:08,991[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:38:09,007[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 12:45:56,415[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:45:56,431[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'quantity' not found.
+2019-10-16 12:51:06,553[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:51:06,568[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'quantity' not found.
+2019-10-16 12:52:56,114[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:52:56,129[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 12:55:46,632[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:55:46,648[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 12:56:54,524[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 12:56:54,539[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 13:01:28,610[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 13:01:28,625[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 13:07:14,606[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 13:07:14,621[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 13:07:46,555[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 13:07:46,571[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 13:07:46,571[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 13:07:46,572[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 13:07:46,572[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 13:07:46,575[yyyy-mm-dd HH-MM-SS] TRACE BloodStock [stock_id=0, bloodtype=A+, expdate=null, hgb=0.0, rbc=0.0, wbc=0.0, platelets=0.0, mcv=0.0]
+2019-10-16 15:43:02,976[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 15:43:02,991[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@53e25b76
+2019-10-16 15:43:02,991[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@ea30797
+2019-10-16 15:43:02,991[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@7e774085
+2019-10-16 15:43:02,991[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@3f8f9dd6
+2019-10-16 15:43:03,007[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@58d25a40
+2019-10-16 17:56:44,033[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-16 17:56:44,090[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@7e774085
+2019-10-16 17:56:44,091[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@3f8f9dd6

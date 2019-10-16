@@ -1,31 +1,35 @@
 package com.virtusa.bloodbank.model;
 
+import java.sql.Date;
+
 public class BloodStock {
 	
 	int stock_id;
 	String bloodtype;
-	String expdate;
+	Date expdate;
 	double hgb, rbc, wbc, platelets, mcv;
 	int donor_id;
+	int count;
 	String  allergies;
-	public BloodStock( String bloodtype, String expdate, double hgb, double rbc, double wbc,
-			double platelets, double mcv, int donor_id, String allergies) {
+	String bloodbank;
+	String baddress;
+
+	public BloodStock(int stock_id, String bloodtype, Date expdate) {
 		super();
-		//this.stock_id = stock_id;
+		this.stock_id = stock_id;
 		this.bloodtype = bloodtype;
 		this.expdate = expdate;
-		this.hgb = hgb;
-		this.rbc = rbc;
-		this.wbc = wbc;
-		this.platelets = platelets;
-		this.mcv = mcv;
-		this.donor_id = donor_id;
-		this.allergies = allergies;
+	}
+
+	public BloodStock(String bloodtype, String bloodbank, String baddress) {
+		super();
+		//this.count=count;
+		this.bloodtype = bloodtype;
+		this.bloodbank = bloodbank;
+		this.baddress = baddress;
 	}
 	
-		
-	
-	public BloodStock(int sid, String bldtype, String edate, double hgb2, double rbc2, double wbc2, double plts,
+	public BloodStock(int sid, String bldtype, Date edate, double hgb2, double rbc2, double wbc2, double plts,
 			double mcv2) {
 		super();
 		this.stock_id = sid;
@@ -39,7 +43,7 @@ public class BloodStock {
 		
 	}
 
-	public BloodStock(int sid, String bldtype, String edate, double hgb2, double rbc2, double wbc2, double plts,
+	public BloodStock(int sid, String bldtype, Date edate, double hgb2, double rbc2, double wbc2, double plts,
 			double mcv2, int did, String allergies2) {
 		super();
 		this.stock_id = sid;
@@ -53,9 +57,45 @@ public class BloodStock {
 		this.donor_id = did;
 		this.allergies = allergies2;
 		}
+	
+	public BloodStock( String bloodtype, Date expdate, double hgb, double rbc, double wbc,
+			double platelets, double mcv, int donor_id, String allergies) {
+		super();
+		//this.stock_id = stock_id;
+		this.bloodtype = bloodtype;
+		this.expdate = expdate;
+		this.hgb = hgb;
+		this.rbc = rbc;
+		this.wbc = wbc;
+		this.platelets = platelets;
+		this.mcv = mcv;
+		this.donor_id = donor_id;
+		this.allergies = allergies;
+	}	
+	
+	public String getBloodbank() {
+		return bloodbank;
+	}
 
+	public void setBloodbank(String bloodbank) {
+		this.bloodbank = bloodbank;
+	}
 
+	public String getBaddress() {
+		return baddress;
+	}
 
+	public void setBaddress(String baddress) {
+		this.baddress = baddress;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
 	public int getStock_id() {
 		return stock_id;
 	}
@@ -68,10 +108,10 @@ public class BloodStock {
 	public void setBloodtype(String bloodtype) {
 		this.bloodtype = bloodtype;
 	}
-	public String getExpdate() {
+	public Date getExpdate() {
 		return expdate;
 	}
-	public void setExpdate(String expdate) {
+	public void setExpdate(Date expdate) {
 		this.expdate = expdate;
 	}
 	public double getHgb() {
@@ -115,14 +155,6 @@ public class BloodStock {
 	}
 	public void setAllergies(String allergies) {
 		this.allergies = allergies;
-	}
-
-
-
-	@Override
-	public String toString() {
-		return "BloodStock [stock_id=" + stock_id + ", bloodtype=" + bloodtype + ", expdate=" + expdate + ", hgb=" + hgb
-				+ ", rbc=" + rbc + ", wbc=" + wbc + ", platelets=" + platelets + ", mcv=" + mcv + "]";
 	}
 	
 	

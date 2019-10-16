@@ -55,13 +55,17 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("username",uname);
 				if(usertype.equals("Donor"))
 					request.getRequestDispatcher("/DonorServlet").forward(request, response);
-				else if(usertype.equals("Bloodbank")||usertype.equals("Hospital"))
+				else if(usertype.equals("Bloodbank"))
 				{
-					request.getRequestDispatcher("/HospitalBloodBank").forward(request, response);
+					request.getRequestDispatcher("/BloodBank").forward(request, response);
 				}
 				else if(usertype.equals("Admin"))
 				{
 					request.getRequestDispatcher("/AdminServlet").forward(request, response);
+				}
+				else if(usertype.equals("Hospital"))
+				{
+					request.getRequestDispatcher("/HospitalData.jsp").forward(request, response);
 				}
 			}catch(ServletException e)
 			{

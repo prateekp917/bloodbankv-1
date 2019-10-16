@@ -11,7 +11,8 @@ public interface BloodStockInterface {
 	//BloodStock add(BloodStock bloodstock);
 	//void update(String allergy, int donor_id);
 	//boolean delete(int stock_id);
-	//BloodStock findBldtype(String bloodtype);
+	List<BloodStock> findBldtype(String bloodtype);
+	List<BloodStock> findstockbbank(String bname);
 
 }
 

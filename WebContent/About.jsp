@@ -2,12 +2,46 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-  <body>
+  <body bgcolor="#F3D3CD">
     <style>
+    
       body {
+      margin:0;
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
 }
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+ 
+}
+
+.topnav a.active {
+  background-color:#4CAF50;
+  color: white;
+  
+}
+ /* .contact{
+      position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;  
+  }*/
+
 
 table {
   border: 1px solid #ccc;
@@ -92,6 +126,12 @@ table th {
   }
 }
     </style>
+    <div class="topnav">
+  <a href="Homepage.jsp">Home</a>
+  <a href="About.jsp">About</a>
+  <a href="Login.jsp">Login</a>
+</div>
+    
     <h3 style="font-family:Comic Sans MS;" >About</h3>
     <p style="text-align:center;">
       Rakt Kosh was established in Chennai,Tamilnadu in October 2001.

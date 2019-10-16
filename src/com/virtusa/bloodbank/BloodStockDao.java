@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.sql.Date;
 import java.util.List;
 import com.virtusa.bloodbank.*;
 import com.virtusa.bloodbank.model.BloodStock;
@@ -18,7 +19,8 @@ import org.apache.log4j.Logger;
 	public class BloodStockDao implements BloodStockInterface {
 		private static final Logger log=Logger.getRootLogger();
 		private Connection connection=DBConnection.getConnection();
-		//private final String FINDBLDTYPE ="select blood_type, count(blood_type) as quantity from blood_stock where blood_type =?";
+		private final String FINDBLDTYPE ="select blood_type,bloodbank,b_address from blood_stock where blood_type =?";
+		private final String FINDSTOCKBBANK ="select stock_id, blood_type, expiry_date from blood_stock where bloodbank =?";
 		//private final String UPDATEALG="update Blood_Stock set Allergies=? where donor_id =?";
 		//private final String DELETEBLD="delete from Blood_Stock where stock_id=?";
 		//private final String ADDBLD="insert into Blood_Stock(blood_type, expiry_date, HGB, RBC, WBC, Platelets, MCV, Donor_id, Allergies) values (?,?,?,?,?,?,?,?,?)";
@@ -26,7 +28,7 @@ import org.apache.log4j.Logger;
 		private final String FINDALL="select stock_id, blood_type, expiry_date, HGB, RBC, WBC, Platelets, MCV, Donor_id, Allergies from Blood_Stock";
 		
 		 
-		
+
 
 		/*@Override
 		public BloodStock findByID(int stock_id) {
@@ -81,7 +83,7 @@ import org.apache.log4j.Logger;
 				{
 					int sid=resultset.getInt("stock_id");
 					String bldtype=resultset.getString("blood_type");
-					String edate=resultset.getString("expiry_date");
+					Date edate=resultset.getDate("expiry_date");
 					double hgb=resultset.getDouble("HGB");
 					double rbc=resultset.getDouble("RBC");
 					double wbc=resultset.getDouble("WBC");
@@ -112,7 +114,45 @@ import org.apache.log4j.Logger;
 			return bloodstock;
 		}
 
-		
+		@Override
+		public List<BloodStock> findstockbbank(String bname) {
+			List<BloodStock> list =new ArrayList<>();
+			PreparedStatement pst=null;
+			BloodStock bbtype=null;
+			try 
+			{
+				pst=connection.prepareStatement(FINDSTOCKBBANK);
+				pst.setString(1,bname);
+				ResultSet rs=pst.executeQuery();
+				while(rs.next())
+				{
+					int stkid = rs.getInt("stock_id");
+					String btype = rs.getString("blood_type");
+					Date edate =rs.getDate("expiry_date");		
+					//String bloodbank=rs.getString("bloodbank");
+					//String baddress=rs.getString("b_address");
+					bbtype =new BloodStock(stkid,btype,edate);
+					list.add(bbtype);
+					log.trace(bbtype);
+					
+				}
+			}
+			catch(SQLException e)
+			{
+				log.error(e);
+			}
+			finally 
+			{
+				if(pst!=null)
+					try {
+						pst.close();
+					}catch(SQLException e)
+				{
+						log.error(e);
+				}
+			}
+			return list;
+	}
 
 		/*@Override
 		public BloodStock add(BloodStock bloodstock) {
@@ -234,30 +274,34 @@ import org.apache.log4j.Logger;
 				{
 						log.error(e);
 				}
-			}
+			}*/
 			
 			@Override
-			public BloodStock findBldtype(String bloodtype) {
+			public List<BloodStock> findBldtype(String bloodtype) {
+				List<BloodStock> list =new ArrayList<>();
 				PreparedStatement pst=null;
+				BloodStock bbtype=null;
 				try 
 				{
 					pst=connection.prepareStatement(FINDBLDTYPE);
-					pst.setInt(1, bloodtype);
-					ResultSet resultset=pst.executeQuery();
-					if(resultset.next())
+					pst.setString(1, bloodtype);
+					ResultSet rs=pst.executeQuery();
+					while(rs.next())
 					{
-						String btype = rs.getString("bloodtype");
-						int count = rs.getInt("quantity");
-						
-					BloodStock bbtype =  new BloodStock(btype, count);
-					log.trace(bbtype);
+						String btype = rs.getString("blood_type");
+						//int count = rs.getInt("quantity");
+						String bloodbank=rs.getString("bloodbank");
+						String baddress=rs.getString("b_address");
+						bbtype =new BloodStock(btype,bloodbank,baddress);
+						list.add(bbtype);
+						System.out.println(list);
+						log.trace(bbtype);
 						
 					}
 				}
 				catch(SQLException e)
 				{
 					log.error(e);
-					return false;
 				}
 				finally 
 				{
@@ -269,16 +313,21 @@ import org.apache.log4j.Logger;
 							log.error(e);
 					}
 				}
-		}*/
+				return list;
+		}
 		
 		public static void main(String[] args) {
 			BloodStockInterface bdao=new BloodStockDao();
-			List<BloodStock> bb=bdao.findAll();
-			//System.out.println("size = " + users.size());
-			for(BloodStock u:bb)
+			List<BloodStock> bb=bdao.findstockbbank("Sharadha Bloodbank");
+			for(BloodStock b:bb)
 			{
-			System.out.println("id: "+u.getDonor_id()+"bloodtype: "+u.getBloodtype()+"Stockid"+u.getStock_id());
+				System.out.println("stkid: "+b.getStock_id()+" btype: "+b.getBloodtype()+"expdate"+b.getExpdate());
 			}
+			//bb.forEach((n)->System.out.println("bloodtype: "+n.getBloodtype()+" bloodbank name: "+n.getBloodbank()+" location: "+n.getBaddress()));  
+				
+			
+			//System.out.println("size = " + users.size());
+			//System.out.println("btype "+bb.getBloodtype()+"bname"+bb.getBloodbank());
 			
 			/*System.out.println("\n");
 			List<BloodStock> list=bldstkdao.findAll();

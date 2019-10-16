@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>List Of users</title>
 </head>
-<body>
+<body bgcolor="#F3D3CD">
 <style>
       body {
   font-family: "Open Sans", sans-serif;

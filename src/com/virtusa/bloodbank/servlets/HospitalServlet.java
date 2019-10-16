@@ -1,10 +1,6 @@
 package com.virtusa.bloodbank.servlets;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,18 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class AdminServlet
+ * Servlet implementation class HospitalBloodBank
  */
-@WebServlet("/AdminServlet")
-public class AdminServlet extends HttpServlet {
-	
-
+@WebServlet("/HospitalServlet")
+public class HospitalServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminServlet() {
+    public HospitalServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,21 +29,28 @@ public class AdminServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-			
-			
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		HttpSession session=request.getSession(false);
 		String username=(String) session.getAttribute("username");
 		request.setAttribute("username", username);
-		//System.out.println("came");
-		request.getRequestDispatcher("/AdminData.jsp").forward(request, response);
-		//doGet(request, response);
+		String bloodgroup=request.getParameter("selectbg");
+		String bbankname=request.getParameter("selectname");
+		if(bloodgroup.equals("Select"))
+		{
+			bloodgroup=null;
+			request.setAttribute("search",bbankname);
+		}
+		else if(bbankname.equals("Select"))
+		{
+			bbankname=null;
+			request.setAttribute("search", bloodgroup);
+		}
+		request.getRequestDispatcher("/SearchResultsServlet").forward(request, response);
 	}
 
 }

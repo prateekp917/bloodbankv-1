@@ -10,6 +10,6 @@ public interface UsersListDAO {
 	List<UsersList> findAll();
 	//List<UsersList> findAllUsers();
 	//UsersList update(UsersList user);
-	//UsersList add(UsersList user);
+	UsersList add(UsersList user);
 	//boolean delete(UsersList user);
 }

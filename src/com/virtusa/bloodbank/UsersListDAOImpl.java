@@ -21,7 +21,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 	private final String findid="select user_id,username from UsersList where user_id=?";
 	private final String findall="select user_id,username,usertype from UsersList";
 	private final String updateuser="update UsersList set username=?,password=?";
-	private final String adduser="insert into UsersList values(seq.nextval,?,?,?)";
+	private final String adduser="insert into UsersList(username,password,usertype) values(?,?,?)";
 	private final String deleteuser="delete from UsersList where userid='?'";
 	private final String findbyusername="select * from UsersList where username=?";
 
@@ -158,33 +158,18 @@ public class UsersListDAOImpl implements UsersListDAO {
 					log.error(e);
 			}
 		}
-	}
+	}*/
 
 	@Override
 	public UsersList add(UsersList user) {
 		PreparedStatement pst=null;
 		try {
 			pst=connection.prepareStatement(adduser);
-			pst.setLong(1, user.getUser_id());
-			pst.setString(2, user.getUsername());
-			pst.setString(3, user.getPassword());
-			pst.setString(4, user.getUsertype());
+			//pst.setLong(1, user.getUser_id());
+			pst.setString(1, user.getUsername());
+			pst.setString(2, user.getPassword());
+			pst.setString(3, user.getUsertype());
 			pst.executeUpdate();
-			String keysql="select seq.currval from dual";
-			Statement stmt=connection.createStatement();
-			boolean rsavailable=stmt.execute(keysql);
-			long idgen=0;
-			if(rsavailable) {
-				ResultSet rs=stmt.getGeneratedKeys();
-				rs.next();
-				idgen=rs.getLong(1);
-				log.debug("id generated: "+idgen);
-				user.setUser_id(idgen);
-			}
-			else
-			{
-				log.debug("cant find key");
-			}
 			connection.commit();
 			return user;
 		}
@@ -205,7 +190,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 		}
 	}
 
-	@Override
+	/*@Override
 	public boolean delete(UsersList user) {
 		PreparedStatement pst=null;
 		try 
@@ -267,14 +252,15 @@ public class UsersListDAOImpl implements UsersListDAO {
 	
 	public static void main(String[] args) {
 		UsersListDAO dao=new UsersListDAOImpl();
-		List<UsersList> users=dao.findAll();
+		/*List<UsersList> users=dao.findAll();
 		//System.out.println("size = " + users.size());
 		for(UsersList u:users)
 		{
 		System.out.println("id: "+u.getUser_id()+"username: "+u.getUsername()+"usertype:"+u.getUsertype());
-		}
+		}*/
 		//UsersList u=dao.findByID(1010);
-		//UsersList user=new UsersList(0,"HEllo","HELLo","Donor");
+		UsersList user=new UsersList("HEllo","HELLo","Donor");
+		dao.add(user);
 	}
 
 }

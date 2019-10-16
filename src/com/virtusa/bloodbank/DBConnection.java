@@ -15,7 +15,7 @@ public class DBConnection {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/userslist", "root", "1");
+			connection=DriverManager.getConnection("jdbc:mysql://10.5.234.18:3306/bloodbank", "root", "1");
 			log.info("Connection to database was established");
 
 		}catch(ClassNotFoundException e)
@@ -43,10 +43,10 @@ public class DBConnection {
 
 
 	public static void main(String[] args)throws SQLException {
-
-BasicConfigurator.configure();
+		System.out.println(new DBConnection());
+		/*BasicConfigurator.configure();
 		Connection con=DBConnection.getConnection();
 		System.out.println(con);
-		con.close();
+		con.close();*/
 	}
 }

@@ -33,3 +33,7 @@ Last packet sent to the server was 0 ms ago.
 
 Last packet sent to the server was 0 ms ago.
 2019-10-14 15:13:14,585[yyyy-mm-dd HH-MM-SS] ERROR com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'userslist.blood_stock' doesn't exist
+2019-10-15 14:52:33,958[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Can't call commit when autocommit=true
+2019-10-16 12:34:48,079[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'bloodtype' not found.
+2019-10-16 12:45:56,431[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'quantity' not found.
+2019-10-16 12:51:06,568[yyyy-mm-dd HH-MM-SS] ERROR java.sql.SQLException: Column 'quantity' not found.
