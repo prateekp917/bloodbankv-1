@@ -15,7 +15,7 @@ public class DBConnection {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			connection=DriverManager.getConnection("jdbc:mysql://10.5.234.18:3306/bloodbank", "root", "1");
+			connection=DriverManager.getConnection("jdbc:mysql://10.5.234.218:3306/bloodbank", "root", "1");
 			log.info("Connection to database was established");
 
 		}catch(ClassNotFoundException e)

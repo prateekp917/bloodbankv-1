@@ -22,7 +22,7 @@ table {
   border-collapse: collapse;
   margin: 20;
   padding: 0;
-  width: 80%;
+  width: 95%;
   table-layout: fixed;
   
 }

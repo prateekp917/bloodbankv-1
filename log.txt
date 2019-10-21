@@ -114,3 +114,10 @@ Last packet sent to the server was 0 ms ago.
 2019-10-16 17:56:44,033[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
 2019-10-16 17:56:44,090[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@7e774085
 2019-10-16 17:56:44,091[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@3f8f9dd6
+2019-10-17 15:19:24,254[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-17 15:19:24,289[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@7e774085
+2019-10-17 15:19:24,289[yyyy-mm-dd HH-MM-SS] TRACE com.virtusa.bloodbank.model.BloodStock@3f8f9dd6
+2019-10-18 10:37:35,382[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-18 10:37:35,396[yyyy-mm-dd HH-MM-SS] TRACE UsersList [user_id=1002, donor_name=null, username=null, password=null, usertype=null]
+2019-10-18 12:28:58,719[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established
+2019-10-21 10:11:06,236[yyyy-mm-dd HH-MM-SS] INFO  Connection to database was established

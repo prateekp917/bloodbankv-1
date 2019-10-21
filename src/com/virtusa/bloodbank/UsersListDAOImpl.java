@@ -18,7 +18,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 	private static final Connection connection=DBConnection.getConnection();
 	//private final String findallusers2="select u.user_id,u.username,u.usertype,d.donor_name from UsersList u left join donordetails d on u.user_id=d.donor_id";
 	//private final String findallusers="select user_id, username, usertype, donor_name from UsersList inner join donordetails where UsersList.user_id=donordetails.donor_id";
-	private final String findid="select user_id,username from UsersList where user_id=?";
+	private final String findid="select user_id from UsersList where username=?";
 	private final String findall="select user_id,username,usertype from UsersList";
 	private final String updateuser="update UsersList set username=?,password=?";
 	private final String adduser="insert into UsersList(username,password,usertype) values(?,?,?)";
@@ -63,19 +63,19 @@ public class UsersListDAOImpl implements UsersListDAO {
 	}*/
 	
 	@Override
-	public UsersList findByID(long userid) {
+	public long findID(String username) {
 		PreparedStatement pst=null;
 		UsersList u=null;
 		try {
 			pst=connection.prepareStatement(findid);
-			pst.setLong(1,userid);
+			pst.setString(1,username);
 			ResultSet resultset=pst.executeQuery();
 			if(resultset.next())
 			{
 				long uid1=resultset.getLong("user_id");
-				String uname=resultset.getString("username");
+				//String uname=resultset.getString("username");
 				//String utype=resultset.getString("usertype");
-				u=new UsersList(uid1,uname);
+				u=new UsersList(uid1);
 				log.trace(u);
 			}
 		}catch(SQLException e)
@@ -92,7 +92,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 					log.error(e);
 			}
 		}
-		return u;
+		return u.getUser_id();
 	}
 
 	@Override
@@ -258,9 +258,10 @@ public class UsersListDAOImpl implements UsersListDAO {
 		{
 		System.out.println("id: "+u.getUser_id()+"username: "+u.getUsername()+"usertype:"+u.getUsertype());
 		}*/
-		//UsersList u=dao.findByID(1010);
-		UsersList user=new UsersList("HEllo","HELLo","Donor");
-		dao.add(user);
+		//UsersList u=dao.findByID("SandhyaS");
+		//System.out.println(u.getUser_id());
+		//UsersList user=new UsersList("HEllo","HELLo","Donor");
+		//dao.add(user);
 	}
 
 }

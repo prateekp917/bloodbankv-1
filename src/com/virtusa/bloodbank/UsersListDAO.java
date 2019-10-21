@@ -5,7 +5,7 @@ import java.util.List;
 import com.virtusa.bloodbank.model.UsersList;
 
 public interface UsersListDAO {
-	UsersList findByID(long userid);
+	public long findID(String username);
 	UsersList findusername(String username);
 	List<UsersList> findAll();
 	//List<UsersList> findAllUsers();

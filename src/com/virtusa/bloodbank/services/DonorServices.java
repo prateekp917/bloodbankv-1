@@ -1,5 +1,6 @@
 package com.virtusa.bloodbank.services;
 
+import java.sql.Date;
 import java.util.List;
 
 import com.virtusa.bloodbank.DonorDetailDAO;
@@ -20,12 +21,27 @@ public class DonorServices {
 		else return true;
 	}
 	
+	public DonorDetail add(DonorDetail donor)
+	{
+		return ddao.add(donor);
+	}
+	
 	public List<DonorDetail> findAll()
 	{
 		return ddao.findAll();
 	}
 	
-	public DonorDetail add(DonorDetail donor) {
-		return ddao.add(donor);
+	public DonorDetail findById(long donor_id) {
+		return ddao.findById(donor_id);
 	} 
+	
+	public long findID(String username)
+	{
+		return dao.findID(username);
+	}
+	
+	public int update(String email,String phone_number,String address,Date prev_donate_date,long donor_id)
+	{
+		return ddao.update(email, phone_number, address, prev_donate_date, donor_id);
+	}
 }

@@ -37,18 +37,23 @@ public class HospitalServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession(false);
 		String username=(String) session.getAttribute("username");
-		request.setAttribute("username", username);
+		//request.setAttribute("username", username);
 		String bloodgroup=request.getParameter("selectbg");
+		System.out.println(bloodgroup+" ng");
+		
 		String bbankname=request.getParameter("selectname");
+		System.out.println(bbankname+" bname");
 		if(bloodgroup.equals("Select"))
 		{
-			bloodgroup=null;
-			request.setAttribute("search",bbankname);
+			//bloodgroup=null;
+			System.out.println("hello");
+			session.setAttribute("search",bbankname);
 		}
 		else if(bbankname.equals("Select"))
 		{
-			bbankname=null;
-			request.setAttribute("search", bloodgroup);
+			//bbankname=null;
+			System.out.println("hello");
+			session.setAttribute("search", bloodgroup);
 		}
 		request.getRequestDispatcher("/SearchResultsServlet").forward(request, response);
 	}

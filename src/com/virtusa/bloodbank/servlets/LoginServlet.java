@@ -48,6 +48,8 @@ public class LoginServlet extends HttpServlet {
 		String checkpassword=user.getPassword();
 		String checkusername=user.getUsername();
 		String checktype=user.getUsertype();
+		
+		System.out.println(checkpassword+ checkusername+checktype);
 		if(uname.equals(checkusername)&&upassword.equals(checkpassword)&&usertype.equals(checktype))
 		{
 			try {
@@ -55,9 +57,9 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("username",uname);
 				if(usertype.equals("Donor"))
 					request.getRequestDispatcher("/DonorServlet").forward(request, response);
-				else if(usertype.equals("Bloodbank"))
+				else if(usertype.equals("Blood Bank"))
 				{
-					request.getRequestDispatcher("/BloodBank").forward(request, response);
+					request.getRequestDispatcher("/BloodBankServlet").forward(request, response);
 				}
 				else if(usertype.equals("Admin"))
 				{

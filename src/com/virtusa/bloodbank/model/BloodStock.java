@@ -156,6 +156,14 @@ public class BloodStock {
 	public void setAllergies(String allergies) {
 		this.allergies = allergies;
 	}
+
+	@Override
+	public String toString() {
+		return "BloodStock [stock_id=" + stock_id + ", bloodtype=" + bloodtype + ", expdate=" + expdate + ", hgb=" + hgb
+				+ ", rbc=" + rbc + ", wbc=" + wbc + ", platelets=" + platelets + ", mcv=" + mcv + ", donor_id="
+				+ donor_id + ", count=" + count + ", allergies=" + allergies + ", bloodbank=" + bloodbank
+				+ ", baddress=" + baddress + "]";
+	}
 	
 	
 }

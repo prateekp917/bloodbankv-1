@@ -21,13 +21,10 @@ public class UsersList {
 		this.username = username;
 		this.usertype = usertype;
 	}
-	/*public UsersList(long user_id, String username, String password, String usertype) {
+	public UsersList(long user_id) {
 		super();
-		this.user_id = user_id;
-		this.username = username;
-		this.password = password;
-		this.usertype = usertype;
-	}*/
+		this.user_id = user_id;	
+	}
 
 	public UsersList(long user_id, String username) {
 		super();

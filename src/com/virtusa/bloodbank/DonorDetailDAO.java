@@ -16,14 +16,15 @@ import com.virtusa.bloodbank.model.UsersList;
 public class DonorDetailDAO implements DonorDetailInterface{
 	private static final Logger log = Logger.getRootLogger();
 	private Connection connection=DBConnection.getConnection();
-	//private final String FindByid="select donor_id, donor_name,email,phone_number,address,gender,blood_group,aadhar_card_number, prev_donate_date from DonorDetails where donor_id=?";
+	private final String FindByid="select * from DonorDetails where donor_id=?";
 	private final String FindAll="select * from Donordetails";
+	//private final
 	private final String Add="insert into Donordetails (donor_name,date_of_birth,email,phone_number,address,gender,blood_group,aadhar_card_number, prev_donate_date) values(?,?,?,?,?,?,?,?,?)";
-	private final String Update="update Donordetails set blood_group=? where donor_id=?";
+	private final String Update="update donordetails set email=?,phone_number=?,address=?,prev_donate_date=? where donor_id=?";
 	private final String Delete="delete from Donordetails where donor_id=?";
 
 	
-	/*@Override
+	@Override
 	public DonorDetail findById(long did) {
 		// TODO Auto-generated method stub
 		PreparedStatement pst=null;
@@ -39,13 +40,14 @@ public class DonorDetailDAO implements DonorDetailInterface{
 				long donor_id=rs.getLong("donor_id");
 				String donor_name=rs.getString("donor_name");
 				String email=rs.getString("email");
-				long phone_number=rs.getLong("phone_number");
+				Date dob=rs.getDate("date_of_birth");
+				String phone_number=rs.getString("phone_number");
 				String address=rs.getString("address");
 				String gender=rs.getString("gender");
 				String blood_group=rs.getString("blood_group");
-				long aadhar_card_number=rs.getLong("aadhar_card_number");
-				String prev_donate_date=rs.getString("prev_donate_date");
-				dd = new DonorDetail(donor_id,donor_name,email,phone_number,address,gender,blood_group,aadhar_card_number,prev_donate_date);
+				String aadhar_card_number=rs.getString("aadhar_card_number");
+				Date prev_donate_date=rs.getDate("prev_donate_date");
+				dd = new DonorDetail(donor_id,donor_name,dob,email,phone_number,address,gender,blood_group,aadhar_card_number,prev_donate_date);
 				log.trace(dd);
 			}
 		}catch(SQLException e)
@@ -69,11 +71,6 @@ public class DonorDetailDAO implements DonorDetailInterface{
 
 		return dd;
 		}
-
-
-		
-	*/
-
 
 	@Override
 	public List<DonorDetail> findAll() {
@@ -129,7 +126,7 @@ public class DonorDetailDAO implements DonorDetailInterface{
 
 	
 	@Override
-	public DonorDetail add(DonorDetail dd) {
+	public DonorDetail add(DonorDetail donor) {
 
 		PreparedStatement pst = null;
 		try
@@ -138,15 +135,15 @@ public class DonorDetailDAO implements DonorDetailInterface{
 			//System.out.println(dd.getAddress());
 		    //pst.setLong(1, dd.getDonor_id());
 		//System.out.println(dd.getDonor_name());
-		    pst.setString(1, dd.getDonor_name());
-			pst.setDate(2, dd.getDate_of_birth());
-		    pst.setString(3, dd.getEmail());
-			pst.setString(4, dd.getPhone_number());
-		    pst.setString(5, dd.getAddress());
-			pst.setString(6, dd.getGender());
-		    pst.setString(7,dd.getBlood_group());
-			pst.setString(8, dd.getAadhar_card_number());
-			pst.setDate(9, dd.getPrev_donate_date());
+		    pst.setString(1, donor.getDonor_name());
+			pst.setDate(2, donor.getDate_of_birth());
+		    pst.setString(3, donor.getEmail());
+			pst.setString(4, donor.getPhone_number());
+		    pst.setString(5, donor.getAddress());
+			pst.setString(6, donor.getGender());
+		    pst.setString(7,donor.getBlood_group());
+			pst.setString(8, donor.getAadhar_card_number());
+			pst.setDate(9, donor.getPrev_donate_date());
 			pst.executeUpdate();
 			connection.commit();
 			
@@ -169,24 +166,28 @@ public class DonorDetailDAO implements DonorDetailInterface{
 			}
 
 			}
-		return dd;
+		return donor;
 	}
 			
 	
 		
 	
 
-	/*@Override
-	public void update(String blood_group, long donor_id) {
+	@Override
+	public int update(String email,String phone_number,String address,Date prev_donate_date,long donor_id) {
 		PreparedStatement pst=null;
+		int rows=0;
         try
         {
         	pst=connection.prepareStatement(Update);
-        	pst.setString(1, blood_group);
-        	pst.setLong(2, donor_id);
-			
-		    pst.executeUpdate();
-		//connection.commit();
+        	pst.setString(1,email);
+        	pst.setString(2,phone_number);
+        	pst.setString(3,address);
+        	pst.setDate(4,prev_donate_date);
+        	pst.setLong(5,donor_id);
+		    rows=pst.executeUpdate();
+		    System.out.println(rows);
+		    //connection.commit();
 		   
         }
         
@@ -209,14 +210,13 @@ public class DonorDetailDAO implements DonorDetailInterface{
 			
 
 		}
-
-		
+		return rows;
 		}
 		// TODO Auto-generated method stub
 		
 	
 
-	@Override
+	/*@Override
 	public boolean delete(long donor_id) {
 		PreparedStatement pst=null;
 		
@@ -253,6 +253,7 @@ public class DonorDetailDAO implements DonorDetailInterface{
 	
 	public static void main(String[] args) {
 		DonorDetailInterface ddao=new DonorDetailDAO();
+		//int u=ddao.update("hellor@gmail.com","9807906970","canada",Date.valueOf("2013-08-03"),1001);`
 		/*List<DonorDetail> uu=ddao.findAll();
 		//System.out.println("size = " + users.size());
 		for(DonorDetail u:uu)

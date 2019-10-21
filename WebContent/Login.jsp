@@ -149,7 +149,7 @@ a {
 
     </style>
  <div class="topnav">
-  <a href="Homepage.jsp">Home</a>
+  <a href="HomePage.jsp">Home</a>
   <a href="About.jsp">About</a>
   <a href="Login.jsp">Login</a>
 </div>
@@ -170,7 +170,7 @@ a {
   <select name="usertype">
   <option value="Admin">Admin</option>
   <option value="Donor">Donor</option>
-  <option value="Bloodbank">Blood Bank</option>
+  <option value="Blood Bank">Blood Bank</option>
   <option value="Hospital">Hospital</option>
 </select><br>
 <input type="Submit" class="login-button" value="LOGIN">
